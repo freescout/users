@@ -9,7 +9,7 @@ require('dotenv').config()
 const app = express();
 
 var corsOptions = {
-  origin: ['http://localhost:3000']
+  origin: ['https://scot-users.herokuapp.com', 'http://localhost:3000']
 };
 app.use(cors(corsOptions))
 app.use(express.urlencoded({ extended: true }));
