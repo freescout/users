@@ -12,7 +12,7 @@ const app = express();
 var corsOptions = {
   origin: ['https://scot-users.herokuapp.com', 'http://localhost:3000']
 };
-//app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/api', router);
