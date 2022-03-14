@@ -1,7 +1,9 @@
 import axios from 'axios';
-const PORT = process.env.PORT || 3001;
+//const serverApiPort = process.env.PORT || 3001;
+//const serverApiBaseUrl = `http://localhost:${serverApiPort}/api`
+const serverApiBaseUrl = `https://scot-users.herokuapp.com/api`
+console.log(`Server API URL base ${serverApiBaseUrl}`);
 
-console.log(`Server API port ${PORT}`);
 export default axios.create({
-  baseURL: `http://localhost:${PORT}/api`
+  baseURL: serverApiBaseUrl
 });
